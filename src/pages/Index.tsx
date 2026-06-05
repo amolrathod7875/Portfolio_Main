@@ -3,6 +3,8 @@ import CursorFollower from "@/components/portfolio/CursorFollower";
 import About from "@/components/portfolio/About";
 import WhatICanDo from "@/components/portfolio/WhatICanDo";
 import Experience from "@/components/portfolio/Experience";
+import Skills from "@/components/portfolio/Skills";
+import Education from "@/components/portfolio/Education";
 import Process from "@/components/portfolio/Process";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
@@ -15,6 +17,8 @@ const Index = () => {
       <About />
       <WhatICanDo />
       <Experience />
+      <Skills />
+      <Education />
       <Process />
       <Contact />
       <Footer />
