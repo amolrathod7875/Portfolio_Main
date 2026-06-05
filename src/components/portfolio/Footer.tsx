@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <p>© Copyright 2025. All Rights Reserved by Amol Rathod</p>
+          <p>© Copyright 2026. All Rights Reserved by Amol Rathod</p>
           <p className="flex items-center gap-2">
             Created by <span className="font-bold">Amol Rathod</span>
           </p>
