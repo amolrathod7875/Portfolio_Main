@@ -16,7 +16,7 @@ const skillGroups = [
   {
     title: "Domains",
     items: [
-      "Artificial Intelligence (LLMs, RAG)",
+      "Artificial Intelligence (LLMs, RAG,NLP)",
       "Data Science",
       "Machine Learning",
       "Deep Learning",

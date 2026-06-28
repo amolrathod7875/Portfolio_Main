@@ -29,7 +29,7 @@ const Education = () => {
             Timeline
           </div>
           <div className="text-2xl md:text-3xl font-extrabold uppercase leading-tight">
-            July 2024 - Expected July 2028
+            July 2024 -  July 2028
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ const Education = () => {
             P.E.S. Modern College of Engineering, Pune, MH
           </p>
           <p className="text-background/70 mb-8">
-            July 2024 - Expected July 2028
+            July 2024 -  July 2028
           </p>
 
             <div className="grid gap-4 md:grid-cols-2">
@@ -68,7 +68,7 @@ const Education = () => {
                 Coursework
               </div>
               <div className="text-sm leading-relaxed text-primary">
-                Data Structures (DSA), Object-Oriented Programming (OOP), Operating System (OS), Computer Networks (CN)
+                Data Structures And Algorithm (DSA), Object-Oriented Programming (OOP), Operating System (OS), Computer Networks (CN)
               </div>
             </div>
           </div>
