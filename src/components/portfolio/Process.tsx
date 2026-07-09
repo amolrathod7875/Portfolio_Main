@@ -56,6 +56,19 @@ const Process = () => {
               : c.variant === "primary"
               ? "bg-primary text-primary-foreground"
               : "bg-secondary text-foreground";
+          const isClickable = c.title === "Vidhoor Legal AI Copilot";
+          if (isClickable) {
+            return (
+              <a key={i} href="/Vidhoor_Legal_Copilot.pdf" target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+                <div className={`rounded-2xl p-8 aspect-square flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl ${styles}`}>
+                  <div className="text-5xl font-black mb-auto">{c.num}.</div>
+                  <h3 className="text-2xl font-extrabold uppercase mb-3">{c.title}</h3>
+                  <p className="text-sm opacity-90 leading-relaxed">{c.body}</p>
+                  <p className="mt-4 text-xs opacity-70">Click to view documentation</p>
+                </div>
+              </a>
+            );
+          }
           return (
             <div key={i} className={`rounded-2xl p-8 aspect-square flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl ${styles}`}>
               <div className="text-5xl font-black mb-auto">{c.num}.</div>
