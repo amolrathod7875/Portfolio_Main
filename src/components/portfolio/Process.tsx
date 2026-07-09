@@ -56,10 +56,16 @@ const Process = () => {
               : c.variant === "primary"
               ? "bg-primary text-primary-foreground"
               : "bg-secondary text-foreground";
-          const isClickable = c.title === "Vidhoor Legal AI Copilot";
+          const pdfMap: Record<string, string> = {
+            "Vidhoor Legal AI Copilot": "/Vidhoor_Legal_Copilot.pdf",
+            "Interview.io AI Interview Prep Platform": "/Interview.io.pdf",
+            "AI Receptionist": "/AI_Receptionist.pdf",
+          };
+          const pdfPath = pdfMap[c.title];
+          const isClickable = !!pdfPath;
           if (isClickable) {
             return (
-              <a key={i} href="/Vidhoor_Legal_Copilot.pdf" target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+              <a key={i} href={pdfPath} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
                 <div className={`rounded-2xl p-8 aspect-square flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl ${styles}`}>
                   <div className="text-5xl font-black mb-auto">{c.num}.</div>
                   <h3 className="text-2xl font-extrabold uppercase mb-3">{c.title}</h3>
