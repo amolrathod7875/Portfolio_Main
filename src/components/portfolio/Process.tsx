@@ -59,7 +59,7 @@ const Process = () => {
           const pdfMap: Record<string, string> = {
             "Vidhoor Legal AI Copilot": "/Vidhoor_Legal_Copilot.pdf",
             "Interview.io AI Interview Prep Platform": "/Interview.io.pdf",
-            "AI Receptionist": "/AI_Receptionist.pdf",
+            "AI Receptionist": "/Ai_Receptionist.pdf",
           };
           const pdfPath = pdfMap[c.title];
           const isClickable = !!pdfPath;
