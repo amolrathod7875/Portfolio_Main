@@ -5,11 +5,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <p className="text-sm opacity-80 mb-2">Email :</p>
-            <p className="font-semibold text-lg">amolrathod7875470402@gmail.com</p>
+            <a href="mailto:amolrathod7875470402@gmail.com" className="font-semibold text-lg no-underline hover:opacity-80 transition-opacity">
+              amolrathod7875470402@gmail.com
+            </a>
           </div>
           <div>
             <p className="text-sm opacity-80 mb-2">Call Today :</p>
-            <p className="font-semibold text-lg">+91-9096293703</p>
+            <a href="tel:+919096293703" className="font-semibold text-lg no-underline hover:opacity-80 transition-opacity">
+              +91-9096293703
+            </a>
           </div>
           <div>
             <p className="text-sm opacity-80 mb-2">Social :</p>
