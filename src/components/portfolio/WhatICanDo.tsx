@@ -75,30 +75,32 @@ const WhatICanDo = () => {
           const hasPdf = !!s.pdf;
           return (
             <div key={s.title} className="border-b border-border">
-              <div
-                className="w-full flex items-center justify-between py-6 text-left cursor-pointer"
-                onClick={() => setOpen(isOpen ? -1 : i)}
-              >
+              <div className="w-full flex items-center justify-between py-6 text-left">
                 <a
-                  href={hasPdf ? s.pdf : undefined}
+                  href={s.pdf}
                   target={hasPdf ? "_blank" : undefined}
                   rel={hasPdf ? "noopener noreferrer" : undefined}
-                  className={`text-2xl md:text-3xl font-extrabold uppercase tracking-tight transition-colors ${
-                    isOpen ? "text-primary" : "text-foreground"
-                  } ${hasPdf ? "hover:underline" : ""}`}
                   onClick={(e) => {
-                    if (hasPdf) {
-                      e.stopPropagation();
+                    if (!hasPdf) {
+                      e.preventDefault();
                     }
                   }}
+                  className={`text-2xl md:text-3xl font-extrabold uppercase tracking-tight transition-colors ${
+                    isOpen ? "text-primary" : "text-foreground"
+                  } ${hasPdf ? "hover:underline cursor-pointer" : ""}`}
                 >
                   {i + 1}. {s.title}
                 </a>
-                {isOpen ? (
-                  <ChevronDown className="h-6 w-6 shrink-0" />
-                ) : (
-                  <ChevronUp className="h-6 w-6 shrink-0" />
-                )}
+                <div
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  className="cursor-pointer"
+                >
+                  {isOpen ? (
+                    <ChevronDown className="h-6 w-6 shrink-0" />
+                  ) : (
+                    <ChevronUp className="h-6 w-6 shrink-0" />
+                  )}
+                </div>
               </div>
               {isOpen && (
                 <ul className="pb-6 space-y-3">
