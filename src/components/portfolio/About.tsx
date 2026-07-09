@@ -1,6 +1,7 @@
 import { Linkedin, Github, FileText } from "lucide-react";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import profileImg from "@/assets/profile.jpg";
+import leetcodeIcon from "@/assets/icons8-leetcode-48.png";
 
 const About = () => {
   return (
@@ -59,6 +60,20 @@ const About = () => {
                 </a>
               </TooltipTrigger>
               <TooltipContent><p>Resume</p></TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://leetcode.com/u/AmolRathod78/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode"
+                  className="h-10 w-10 rounded-md bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
+                >
+                  <img src={leetcodeIcon} alt="LeetCode" className="h-5 w-5" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent><p>LeetCode</p></TooltipContent>
             </Tooltip>
           </div>
         </div>
