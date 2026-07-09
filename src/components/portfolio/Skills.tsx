@@ -22,6 +22,7 @@ const skillGroups = [
       "Deep Learning",
       "Cloud Computing",
       "Web Development",
+      "System Design"
     ],
   },
   {
@@ -32,15 +33,10 @@ const skillGroups = [
       "Pandas",
       "NumPy",
       "Scikit-Learn",
-      "VS Code",
       "Git/GitHub",
-      "Vapi",
       "n8n",
       "Oracle Cloud",
-      "Docker",
-      "REST APIs",
-      "Webhooks",
-      "JSON",
+      "Docker"
     ],
   },
 ];

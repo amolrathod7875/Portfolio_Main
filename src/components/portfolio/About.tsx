@@ -1,4 +1,5 @@
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, FileText } from "lucide-react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import profileImg from "@/assets/profile.jpg";
 
 const About = () => {
@@ -17,24 +18,48 @@ const About = () => {
             Combining expertise in intelligent visual design and interactive engineering, I transform concepts into dynamic experiences—integrating smart layouts, fluid animations, and adaptive interfaces for optimal impact.
           </p>
           <div className="flex items-center gap-4">
-            <a
-              href="https://www.linkedin.com/in/amol-rathod78"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="h-10 w-10 rounded-md bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="https://github.com/amolrathod7875"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="h-10 w-10 rounded-md flex items-center justify-center text-foreground hover:text-primary transition-colors"
-            >
-              <Github className="h-5 w-5" />
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://www.linkedin.com/in/amol-rathod78"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="h-10 w-10 rounded-md bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent><p>LinkedIn</p></TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://github.com/amolrathod7875"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="h-10 w-10 rounded-md flex items-center justify-center text-foreground hover:text-primary transition-colors"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent><p>GitHub</p></TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Resume"
+                  className="h-10 w-10 rounded-md bg-foreground text-background flex items-center justify-center hover:bg-primary transition-colors"
+                >
+                  <FileText className="h-5 w-5" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent><p>Resume</p></TooltipContent>
+            </Tooltip>
           </div>
         </div>
         <div className="relative group max-w-xs md:max-w-sm md:ml-auto w-full">
