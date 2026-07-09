@@ -41,6 +41,7 @@ const services: Service[] = [
   },
   {
     title: "MLOps Engineer",
+    pdf: "/MLOps.pdf",
     points: [
       "Streamlining the machine learning workflow",
       "Continuous integration and deployment (CI/CD)",
@@ -50,7 +51,7 @@ const services: Service[] = [
   },
 ];
 
-const WhatICanDo = () => {
+const WhatICanDo = () => {  
   const [open, setOpen] = useState(3);
 
   return (
