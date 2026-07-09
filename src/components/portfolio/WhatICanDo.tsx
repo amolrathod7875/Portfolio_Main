@@ -5,11 +5,13 @@ import studyImg from "@/assets/study.jpg";
 type Service = {
   title: string;
   points: string[];
+  pdf?: string;
 };
 
 const services: Service[] = [
   {
     title: "Data Analyst",
+    pdf: "/Data_Analyst.pdf",
     points: [
       "Turning raw data into actionable insights",
       "Building dashboards and visual reports",
@@ -19,6 +21,7 @@ const services: Service[] = [
   },
   {
     title: "Machine Learning Engineer",
+    pdf: "/ML_Engineer.pdf",
     points: [
       "Designing and training ML models",
       "Feature engineering and evaluation",
@@ -28,6 +31,7 @@ const services: Service[] = [
   },
   {
     title: "Cloud Engineer",
+    pdf: "/Cloud_Engineer.pdf",
     points: [
       "Architecting scalable cloud infrastructure",
       "CI/CD and infrastructure-as-code",
@@ -68,25 +72,34 @@ const WhatICanDo = () => {
       <div className="mt-12 max-w-3xl">
         {services.map((s, i) => {
           const isOpen = open === i;
+          const hasPdf = !!s.pdf;
           return (
             <div key={s.title} className="border-b border-border">
-              <button
+              <div
+                className="w-full flex items-center justify-between py-6 text-left cursor-pointer"
                 onClick={() => setOpen(isOpen ? -1 : i)}
-                className="w-full flex items-center justify-between py-6 text-left"
               >
-                <span
+                <a
+                  href={hasPdf ? s.pdf : undefined}
+                  target={hasPdf ? "_blank" : undefined}
+                  rel={hasPdf ? "noopener noreferrer" : undefined}
                   className={`text-2xl md:text-3xl font-extrabold uppercase tracking-tight transition-colors ${
                     isOpen ? "text-primary" : "text-foreground"
-                  }`}
+                  } ${hasPdf ? "hover:underline" : ""}`}
+                  onClick={(e) => {
+                    if (hasPdf) {
+                      e.stopPropagation();
+                    }
+                  }}
                 >
                   {i + 1}. {s.title}
-                </span>
+                </a>
                 {isOpen ? (
                   <ChevronDown className="h-6 w-6 shrink-0" />
                 ) : (
                   <ChevronUp className="h-6 w-6 shrink-0" />
                 )}
-              </button>
+              </div>
               {isOpen && (
                 <ul className="pb-6 space-y-3">
                   {s.points.map((p) => (
