@@ -7,7 +7,7 @@ const certifications = [
 ];
 
 const achievements = [
-  "Active competitive programmer with 80+ problems solved on LeetCode focusing on DSA.",
+  "Active competitive programmer with 200+ problems solved on LeetCode focusing on DSA.",
   "Participant in TENET Hack 25 and Innerve X (Army Institute of Technology).",
 ];
 
@@ -61,7 +61,7 @@ const Education = () => {
               <div className="text-sm uppercase tracking-[0.25em] text-primary/80 mb-2">
                 CGPA
               </div>
-              <div className="text-3xl font-black text-primary">9.03</div>
+              <div className="text-3xl font-black text-primary">9.00</div>
             </div>
             <div className="rounded-xl border border-border bg-muted p-4">
               <div className="text-sm uppercase tracking-[0.25em] text-primary/80 mb-2">

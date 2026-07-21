@@ -1,7 +1,7 @@
 const skillGroups = [
   {
     title: "Languages",
-    items: ["Python", "C++", "C", "JavaScript"],
+    items: ["Python", "C++", "C"],
   },
   {
     title: "Core Concepts",
@@ -9,8 +9,8 @@ const skillGroups = [
       "Data Structures & Algorithms",
       "OOPS",
       "Operating Systems",
-      "Workflow Orchestration",
-      "Process Automation",
+      "Computer Networks",
+      "Database Management System",
     ],
   },
   {
