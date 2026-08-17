@@ -30,13 +30,11 @@ const skillGroups = [
     items: [
       "Vector Databases",
       "Oracle Autonomous Database",
-      "Pandas",
-      "NumPy",
-      "Scikit-Learn",
       "Git/GitHub",
       "n8n",
       "Oracle Cloud",
-      "Docker"
+      "Docker",
+      "Hugging Face"
     ],
   },
 ];
