@@ -1,6 +1,7 @@
 import setupImg from "@/assets/setup.jpg";
 import laptopImg from "@/assets/laptop.jpg";
 import asthetic_coding from "@/assets/asthetic_coding.jpg";
+import sovereignAiImg from "@/assets/sovereign-ai.jpg";
 
 type Card = {
   num: string;
@@ -32,20 +33,35 @@ const cards: Card[] = [
     variant: "light",
   },
   { num: "", title: "", body: "", variant: "asthetic_coding", img: true },
+  { num: "", title: "", body: "", variant: "image", img: true },
+  {
+    num: "04",
+    title: "Sovereign AI",
+    body: "Engineered a self-hosted, air-gapped AI workbench for confidential industrial intelligence. Integrated local multimodal models, hybrid RAG with Qdrant and BM25, LangGraph agentic workflows, P&ID analysis, and sandboxed execution. Designed with network controls, auditable executions, and local data processing for privacy-sensitive environments.",
+    variant: "light",
+  },
 ];
 
 const Process = () => {
   return (
-    <section className="container mx-auto px-6 py-24 md:py-32">
+    <section id="projects" className="container mx-auto px-6 py-24 md:py-32">
       <h2 className="heading-display text-5xl md:text-7xl mb-16 max-w-3xl">
         Project 
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
         {cards.map((c, i) => {
           if (c.variant === "image" || c.variant === "asthetic_coding") {
-            const imgSrc = c.variant === "asthetic_coding" ? asthetic_coding : i === 1 ? setupImg : laptopImg;
+            const imgSrc =
+              c.variant === "asthetic_coding"
+                ? asthetic_coding
+                : i === 1
+                  ? setupImg
+                  : i === 6
+                    ? sovereignAiImg
+                    : laptopImg;
+            const colSpan = i === 6 ? "md:col-span-2" : "";
             return (
-              <div key={i} className="rounded-2xl overflow-hidden bg-muted aspect-square group">
+              <div key={i} className={`rounded-2xl overflow-hidden bg-muted aspect-square md:aspect-auto group ${colSpan}`}>
                 <img src={imgSrc} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             );
@@ -60,6 +76,7 @@ const Process = () => {
             "Vidhoor Legal AI Copilot": "/Vidhoor_Legal_Copilot.pdf",
             "Interview.io AI Interview Prep Platform": "/Interview.io.pdf",
             "AI Receptionist": "/Ai_Receptionist.pdf",
+            "Sovereign AI": "/Sovereign_AI.pdf",
           };
           const pdfPath = pdfMap[c.title];
           const isClickable = !!pdfPath;

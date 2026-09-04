@@ -2,7 +2,7 @@ import laptopImg from "@/assets/laptop.jpg";
 
 const Experience = () => {
   return (
-    <section id="projects" className="container mx-auto px-6 py-16 md:py-20">
+    <section className="container mx-auto px-6 py-16 md:py-20">
       <div className="grid md:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 mb-12">
         <div>
           <h2 className="heading-display text-4xl md:text-6xl mb-6">
