@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import setupImg from "@/assets/setup.jpg";
 import laptopImg from "@/assets/laptop.jpg";
 import asthetic_coding from "@/assets/asthetic_coding.jpg";
@@ -42,12 +44,26 @@ const cards: Card[] = [
   },
 ];
 
-const Process = () => {
+type ProcessProps = {
+  showViewAllArrow?: boolean;
+};
+
+const Process = ({ showViewAllArrow = false }: ProcessProps) => {
   return (
     <section id="projects" className="container mx-auto px-6 py-24 md:py-32">
-      <h2 className="heading-display text-5xl md:text-7xl mb-16 max-w-3xl">
-        Project 
-      </h2>
+      <div className="flex items-end justify-between mb-16">
+        <h2 className="heading-display text-5xl md:text-7xl max-w-3xl">
+          Project 
+        </h2>
+        {showViewAllArrow && (
+          <Link
+            to="/projects"
+            className="relative text-foreground hover:text-primary transition-colors duration-300 mb-2"
+          >
+            <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8" />
+          </Link>
+        )}
+      </div>
       <div className="grid md:grid-cols-3 gap-6">
         {cards.map((c, i) => {
           if (c.variant === "image" || c.variant === "asthetic_coding") {

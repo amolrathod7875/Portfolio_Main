@@ -6,6 +6,7 @@ import Experience from "@/components/portfolio/Experience";
 import Skills from "@/components/portfolio/Skills";
 import Education from "@/components/portfolio/Education";
 import Process from "@/components/portfolio/Process";
+import BlogsPreview from "@/components/portfolio/BlogsPreview";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
 
@@ -19,7 +20,8 @@ const Index = () => {
       <Experience />
       <Skills />
       <Education />
-      <Process />
+      <Process showViewAllArrow />
+      <BlogsPreview />
       <Contact />
       <Footer />
     </main>

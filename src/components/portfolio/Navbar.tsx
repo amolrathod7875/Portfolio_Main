@@ -2,10 +2,10 @@ import profileImg from "@/assets/profile.jpg";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[min(95%,720px)]">
+    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[min(95%,800px)]">
       <nav className="flex items-center justify-between gap-4 rounded-full bg-white/90 backdrop-blur-md border border-border shadow-[0_8px_30px_rgb(0,0,0,0.06)] pl-2 pr-2 py-2">
         <a
-          href="#"
+          href="/"
           className="group flex items-center gap-3 rounded-full pr-5 pl-1 py-1 transition-all duration-300 hover:bg-secondary"
         >
           <div className="h-10 w-10 rounded-full overflow-hidden bg-muted shrink-0 transition-transform duration-300 group-hover:scale-110">
@@ -21,13 +21,18 @@ const Navbar = () => {
         </a>
         <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground">
           <li>
-            <a href="#projects" className="relative transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+            <a href="/projects" className="relative transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="/blog" className="relative transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+              Blogs
             </a>
           </li>
         </ul>
         <a
-          href="#contact"
+          href="/#contact"
           className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-primary hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30"
         >
           <span className="relative flex h-2 w-2">
