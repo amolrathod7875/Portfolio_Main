@@ -18,16 +18,22 @@ const EnsembleLearningPost = () => (
     <CursorFollower />
     <Navbar />
     <style>{`
+      .katex {
+        white-space: nowrap;
+        font-size: 1.05em;
+      }
       .katex-display {
+        display: block;
+        white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
         max-width: 100%;
         text-align: center;
         margin: 1.5rem 0;
-        padding: 0.25rem 0;
+        padding: 0.5rem 0;
       }
-      .katex {
-        font-size: 1.05em;
+      .katex-display > .katex {
+        white-space: nowrap;
       }
     `}</style>
     <article className="container mx-auto px-6 py-12 md:py-20">
