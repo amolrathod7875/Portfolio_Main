@@ -50,10 +50,29 @@ const EnsembleLearningPost = () => (
             components={{
               table: ({ children }) => (
                 <div className="my-8 w-full overflow-x-auto rounded-xl border border-border">
-                  <table className="my-0 w-full min-w-[560px] text-sm">
+                  <table className="my-0 w-full min-w-[560px] border-collapse text-sm">
                     {children}
                   </table>
                 </div>
+              ),
+              thead: ({ children }) => (
+                <thead className="bg-secondary/60">{children}</thead>
+              ),
+              th: ({ children, align }) => (
+                <th
+                  className="border-b border-border px-4 py-3 font-semibold text-foreground"
+                  style={{ textAlign: align ?? "left" }}
+                >
+                  {children}
+                </th>
+              ),
+              td: ({ children, align }) => (
+                <td
+                  className="border-b border-border px-4 py-3 align-top text-muted-foreground"
+                  style={{ textAlign: align ?? "left" }}
+                >
+                  {children}
+                </td>
               ),
               img: ({ src, alt }) => (
                 <a
