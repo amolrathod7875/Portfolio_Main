@@ -16,9 +16,18 @@ const Experience = () => {
               <p className="text-sm font-bold uppercase tracking-tight text-foreground">AI Intern</p>
               <p className="text-sm font-semibold uppercase tracking-tight text-foreground mt-1">VR Coating Pvt. Ltd.</p>
               <p className="text-xs text-muted-foreground mt-1">Pune, Maharashtra | Sep 2026 – Present</p>
-              <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-                Developing a RAG-based AI system for VR Coatings to enable intelligent retrieval and question answering over company-specific information.
-              </p>
+              <div className="mt-3">
+                <p className="text-sm font-semibold text-foreground">RAG-BASED AI KNOWLEDGE SYSTEM</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                  Developing a RAG-based AI system for VR Coatings to enable intelligent retrieval and question answering over company-specific information.
+                </p>
+                <div className="border-t border-border mt-3 pt-3">
+                  <p className="text-sm font-semibold text-foreground">B2B LEAD GENERATION & AUTOMATION</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                    Developed an n8n-based B2B lead-generation workflow for company discovery, official-website contact enrichment, decision-maker research, deduplication, and Google Sheets-based lead tracking, review, and sales handoff.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
