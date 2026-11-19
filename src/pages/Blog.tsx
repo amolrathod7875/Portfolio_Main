@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/portfolio/Navbar";
 import CursorFollower from "@/components/portfolio/CursorFollower";
 
@@ -9,13 +8,6 @@ const Blog = () => {
       <CursorFollower />
       <Navbar />
       <section className="container mx-auto px-6 py-16 md:py-24">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Link>
         <div className="max-w-3xl">
           <h1 className="heading-display text-5xl md:text-7xl mb-6">
             BLOGS
@@ -27,38 +19,75 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-            Featured Blog
-          </p>
-          <Link
-            to="/blog/building-rag-for-company-knowledge"
-            className="group block rounded-2xl border border-border bg-background p-8 md:p-10 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                AI Systems • RAG
-              </span>
-              <span className="text-xs font-medium text-muted-foreground">
-                12 min read
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-extrabold uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
-              Building RAG for Company-Specific Knowledge
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              A practical look at building retrieval-augmented generation
-              systems for private organizational data.
+        <div className="max-w-3xl space-y-8">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+              Latest
             </p>
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-muted-foreground">
-                Oct 04, 2026
-              </span>
-              <span className="text-2xl font-light text-primary transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </div>
-          </Link>
+            <Link
+              to="/blog/ensemble-learning-explained"
+              className="group block rounded-2xl border border-border bg-background p-8 md:p-10 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                  Machine Learning • Ensemble Learning
+                </span>
+                <span className="text-xs font-medium text-muted-foreground">
+                  18 min read
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                Ensemble Learning Explained: Why Multiple Models Can Outperform One
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                From voting and bagging to random forests, boosting, and
+                stacking — with mathematical intuition, diagrams, and a
+                reproducible Python experiment.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-muted-foreground">
+                  Nov 19, 2026
+                </span>
+                <span className="text-2xl font-light text-primary transition-transform duration-300 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+              Featured Blog
+            </p>
+            <Link
+              to="/blog/building-rag-for-company-knowledge"
+              className="group block rounded-2xl border border-border bg-background p-8 md:p-10 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                  AI Systems • RAG
+                </span>
+                <span className="text-xs font-medium text-muted-foreground">
+                  12 min read
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold uppercase leading-tight mb-4 group-hover:text-primary transition-colors">
+                Building RAG for Company-Specific Knowledge
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                A practical look at building retrieval-augmented generation
+                systems for private organizational data.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-muted-foreground">
+                  Oct 04, 2026
+                </span>
+                <span className="text-2xl font-light text-primary transition-transform duration-300 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

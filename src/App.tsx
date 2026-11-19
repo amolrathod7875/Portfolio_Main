@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Projects from "./pages/Projects.tsx";
 import Blog from "./pages/Blog.tsx";
+import EnsembleLearningPost from "./pages/EnsembleLearningPost.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/ensemble-learning-explained" element={<EnsembleLearningPost />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
