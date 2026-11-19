@@ -17,6 +17,19 @@ const EnsembleLearningPost = () => (
   <main className="min-h-screen bg-background pt-32 md:cursor-none">
     <CursorFollower />
     <Navbar />
+    <style>{`
+      .katex-display {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+        text-align: center;
+        margin: 1.5rem 0;
+        padding: 0.25rem 0;
+      }
+      .katex {
+        font-size: 1.05em;
+      }
+    `}</style>
     <article className="container mx-auto px-6 py-12 md:py-20">
       <div className="max-w-3xl mx-auto">
         <Link
@@ -43,6 +56,9 @@ const EnsembleLearningPost = () => (
           prose-pre:rounded-xl prose-pre:overflow-x-auto
           prose-img:rounded-xl prose-img:border prose-img:border-border
           prose-hr:border-border
+          [&_.katex-display]:block [&_.katex-display]:overflow-x-auto [&_.katex-display]:overflow-y-hidden
+          [&_.katex-display]:max-w-full [&_.katex-display]:py-2 [&_.katex-display]:text-center
+          [&_.katex]:align-baseline
         ">
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
