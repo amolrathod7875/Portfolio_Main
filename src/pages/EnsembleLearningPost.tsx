@@ -96,6 +96,32 @@ const EnsembleLearningPost = () => (
                   {children}
                 </td>
               ),
+              code: ({ className, children, ...props }) => {
+                const isBlock = /language-/.test(className || "");
+                if (isBlock) {
+                  return (
+                    <code
+                      className={`${className ?? ""} block font-mono text-sm leading-relaxed text-neutral-100 whitespace-pre`}
+                      {...props}
+                    >
+                      {children}
+                    </code>
+                  );
+                }
+                return (
+                  <code
+                    className="rounded bg-secondary px-1.5 py-0.5 font-mono text-sm text-foreground"
+                    {...props}
+                  >
+                    {children}
+                  </code>
+                );
+              },
+              pre: ({ children }) => (
+                <pre className="my-6 overflow-x-auto rounded-xl bg-neutral-950 p-4 md:p-6 text-neutral-100 shadow-sm">
+                  {children}
+                </pre>
+              ),
               img: ({ src, alt }) => (
                 <a
                   href={src}
